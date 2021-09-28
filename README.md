@@ -5,7 +5,7 @@ KWEB 2학기 백엔드 스터디를 위한 레포지토리
 - [x] Git & Github
 - [x] HTTP
 - [ ] Node.js
-    - [ ] Advanced Javascript
+    - [x] Advanced Javascript
     - [ ] express.js
         - [ ] view engine
     - [ ] Authentication
