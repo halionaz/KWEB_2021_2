@@ -1,4 +1,4 @@
-const cases = require("./cases");
+const cases = require("./submit/cases");
 
 const n = 8;
 const r = 3;
