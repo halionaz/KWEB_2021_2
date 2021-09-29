@@ -3,7 +3,7 @@ const {readdir} = require('fs');
 const searchDir = (loc) => {
     readdir(loc, {withFileTypes: true}, (err,files) => {
         if(err){
-            console.log("에러가 발생했습니다.");
+            console.error(err);
         } else {
             files.map((file) => {
                 if(file.name.slice(-3) === '.js'){
