@@ -1,1 +1,16 @@
-h1 Hello World
+doctype html
+html
+    head
+        title Index Page
+        meta(charset='utf-8')
+    body
+        .page-header
+            h1#page-title Index Title
+            ul
+                li
+                    a(href='/page') Go to Board
+                li
+                    a(href='/article/compose') Compose New Article
+        .page-body
+            | Page Body
+            | Hello World!

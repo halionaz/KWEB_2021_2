@@ -1,0 +1,11 @@
+doctype html
+html
+    head
+        title Posts Page
+    body
+        if posts.length
+            h1 Posts Count: #{posts.length}
+            each post, index in posts
+                h3 #{index} - #{post}
+        else
+            h1 Invalid Page!
