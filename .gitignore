@@ -1,4 +1,5 @@
 *.txt
 /node_modules
 /assignment/submit/test
+/assignment/assignment5/secret.js
 /ch5
