@@ -8,7 +8,7 @@ KWEB 2학기 백엔드 스터디를 위한 레포지토리
     - [x] Advanced Javascript
     - [x] express.js
         - [x] view engine
-    - [ ] Authentication
-        - [ ] Cookie & Session
-- [ ] Database
+    - [x] Authentication
+        - [x] Cookie & Session
+- [x] Database
     - [x] SQL
