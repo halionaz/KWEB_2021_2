@@ -13,7 +13,20 @@ const geratePassword = async text => {
     return `${ALGO}:${salt.toString('base64')}:${iter}:${KEY_LEN}:${digest.toString('base64')}`;
 };
 
+const verifyPassword = async(password, hashedPassword) => {
+    const [algo, encoded_salt, iter_str, key_len_str, encoded_digest] = hashedPassword.split(':');
+    const salt = Buffer.from(encoded_salt, 'base64');
+    const iter = parseInt(iter_str, 10);
+    const key_len = parseInt(key_len_str, 10);
+    const stored_digest = Buffer.from(encoded_digest, 'base64');
+    const digest = await pbkdf2(password, salt, iter, key_len, algo);
+    return Buffer.compare(stored_digest, digest) === 0;
+}
+
 (async () => {
     const hashed = await geratePassword('1234');
-    console.log(hashed);
+    const result1 = await verifyPassword('1234', hashed);
+    const result2 = await verifyPassword('1235', hashed);
+    console.log(result1);
+    console.log(result2);
 })();
