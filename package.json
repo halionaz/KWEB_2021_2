@@ -4,6 +4,7 @@
   },
   "dependencies": {
     "express": "^4.17.1",
+    "express-session": "^1.17.2",
     "lodash": "^4.17.21",
     "mysql2": "^2.3.3-rc.0",
     "pug": "^3.0.2"
